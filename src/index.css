@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600;700&family=Varela+Round&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav li a:after,
+nav li a:before {
+  background-color: #f06407;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  transition: .3s;
+}
+
+nav li a:before {
+  height: 0;
+  width: 1px;
+}
+
+nav li a:after {
+  height: 1px;
+  width: 0;
+}
+
+nav li a:hover::after {
+  width: 60%;
+}
+
+nav li a:hover::before {
+  height: 40%;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li:after,
+nav ul li:before {
+  background-color: #f06407;
+  top: 0;
+  content: "";
+  right: 0;
+  position: absolute;
+  transition: .3s;
+}
+
+nav ul li:before {
+  height: 0;
+  width: 1px;
+}
+
+nav ul li:after {
+  height: 1px;
+  width: 0;
+}
+
+nav li:hover::after {
+  width: 60%;
+}
+
+nav li:hover::before {
+  height: 40%;
+}
+
+
+div.active {
+  border: 1px solid #0fa4e9;
+}
